@@ -1,0 +1,8 @@
+import cv2 as c
+import numpy as np
+path="C:\\Users\\abhar\\Desktop\\openCV\\736462.png"
+
+img=c.imread(path)
+imgGray=c.cvtColor(img,c.COLOR_BGR2GRAY)
+c.imshow("GrayScale",imgGray)
+c.waitKey(0)
