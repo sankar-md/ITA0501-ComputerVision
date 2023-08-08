@@ -1,0 +1,17 @@
+import cv2
+import numpy as np
+path="C:/Users/abhar/Desktop/openCV/736462.png"
+img=cv2.imread(path)
+
+imgGray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+imgRGB=cv2.cvtColor(imgGray,cv2.COLOR_GRAY2RGB)
+
+imgBlur=cv2.GaussianBlur(imgGray,(5,3),10)
+#cv2.namedWindow("Output Image", cv2.WINDOW_NORMAL)
+cv2.namedWindow("Output Image", cv2.WINDOW_NORMAL)
+cv2.imshow("Output Image", imgBlur)
+
+# Resize the output window
+cv2.resizeWindow("Output Image", 1280, 1920)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
