@@ -1,0 +1,16 @@
+import cv2
+
+# Load the input image
+input_image = cv2.imread("C:/Users/abhar/Desktop/openCV/images/21612.jpg")
+
+# Define the new dimensions (width, height)
+new_width = 800
+new_height = 600
+
+# Resize the image
+resized_image = cv2.resize(input_image, (new_width, new_height))
+
+# Display the resized image
+cv2.imshow("Resized Image", resized_image)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
