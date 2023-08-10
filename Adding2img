@@ -1,0 +1,11 @@
+import cv2
+import numpy as np
+image1 = cv2.imread('C:/Users/abhar/Desktop/openCV/images/add1.jpg')
+image2 = cv2.imread('C:/Users/abhar/Desktop/openCV/images/add2.jpg')
+
+weightedSum = cv2.addWeighted(image1, 0.7, image2, 0.3,0)
+
+cv2.imshow('Weighted Image', weightedSum)
+
+if cv2.waitKey(0):
+	cv2.destroyAllWindows()
